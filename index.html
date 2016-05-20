@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Caso real. Evolución de la arquitectura DevOps. Errores y lecciones aprendidas</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- __ INTRO __ -->
+				<section>
+					<h3>Evolución de la arquitectura DevOps
+						Errores y lecciones aprendidas</h3>
+					<p>
+					<h4>Jaime Jorge</h4>
+					</p>
+					<p>
+					<h4>Jordi Miguel</h4>
+					</p>
+					<p>
+					<h5>Devops Engineer / Systems Administrator @ Infrastructure - Schibsted</h5>
+					</p>
+
+				</section>
+				<!--
+				<section>
+					<h2>Today</h2>
+					<ul>
+						<li>Schibsted intro</li>
+						<li>Errores</li>
+						<li>Lecciones Aprendidas</li>
+				</ul>
+				</section>
+				-->
+
+				<!-- __ SCHIBSTED INTRO __ -->
+				<section>
+					<a class="image" href="http://www.schibsted.com"><img src="./img/SMG_Medium_2014_RGB.jpg"/></a>
+					<p class="fragment">Schibsted Media Group is an international media group with 6800 employees in 31 countries</p>
+					<p class="fragment"><strong>250M+ users</strong></p>					
+				</section>
+				<!-- section>
+					<img src="./img/schibsted_sites.png"/>
+				</section-->
+				<section>
+					<img src="./img/schibsted-classified-map.png"/>
+				</section>	
+				<section>
+					<img src="./img/sch-logos.png"/>
+				</section>
+				<section>
+					<img src="./img/sch-spain.png"/>
+				</section>
+				<!-- __ ERRORES __ -->
+				<section>
+					<h2>Errores</h2>
+					<p>
+						Un experto es una persona que ha cometido todos los errores que se pueden cometer en un determinado campo.
+					</p>
+					<img width="500" height="300" src="./gifs/matrix.gif"/>
+				</section>
+				<section>
+					<section>
+						<h2>Hasta el infinito y más allá</h2>
+						<br>
+						<img  width="500" height="300" src="./gifs/infinito.gif"/>
+					</section>
+					<section>
+						<h2>Hasta el infinito y más allá</h2>
+						<ul>
+							<li>Disco</li>
+							<li>Memoria</li>
+							<li>CPU</li>
+							<li>Autolimpieza</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>SPOF Ocultos</h2>
+						<br>
+						<img  width="500" height="300" src="./gifs/indiana.gif"/>
+					</section>
+					<section>
+						<h2>SPOF Ocultos</h2>
+						<ul>
+							<li>Configuraciones hardcoded</li>
+							<li>Bases de datos</li>
+							<li>Reintentos finitos</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<br>
+						<img  width="500" height="300" src="./gifs/murphy.gif"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img  width="500" height="300" src="./gifs/murphy1.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img  width="500" height="300" src="./gifs/murphy2.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img  width="500" height="300" src="./gifs/murphy3.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img  width="500" height="300" src="./gifs/murphy4.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img  width="500" height="300" src="./gifs/murphy5.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img width="500" height="300" src="./gifs/murphy6.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img width="500" height="300" src="./gifs/murphy7.jpg"/>
+					</section>
+					<section>
+						<h2>Murphy's law, design for failure</h2>
+						<img width="500" height="300" src="./gifs/murphy8.jpg"/>
+					</section>
+
+				</section>
+				<section>
+					<section>
+						<h2>Human Factor</h2>
+						<ul>
+							<li>Automatiza</li>
+						</ul>
+						<br>
+						<img width="500" height="300" src="./gifs/automatic3.gif"/>
+					</section>
+					<section>
+						<h2>Human Factor</h2>
+						<ul>
+							<li>Automatiza: Simple</li>
+						</ul>
+						<br>
+						<img width="500" height="300" style="background-color:white;"  src="./gifs/complejo.gif"/>
+					</section>
+					<section>
+						<h2>Human Factor</h2>
+						<ul>
+							<li>Automatiza: Fácil</li>
+						</ul>
+						<br>
+						<img width="500" height="300" style="background-color:white;"  src="./gifs/facil.gif"/>
+					</section>
+					<section>
+						<h2>Human Factor</h2>
+						<ul>
+							<li>Automatiza</li>
+						</ul>
+						<br>
+						<img width="500" height="300" src="./gifs/automatic2.gif"/>
+					</section>
+					<section>
+						<h2>Human Factor</h2>
+						<ul>
+							<li>Automatiza: nothing is impossible</li>
+						</ul>
+						<br>
+						<img width="500" height="300" src="./gifs/automatic1.jpg"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Speed VS blindness</h2>
+						<ul>
+							<li>La velocidad sin control no sirve de nada.</li>
+						</ul>
+						<img width="500" height="300" src="./gifs/speed.gif"/>
+					</section>
+					<section>
+						<h2>Speed VS blindness</h2>
+						<table>
+							<tr>
+								<td>
+									<ul>
+										<li>Monitorización Jeroglífica</li>
+										<li>Opinología de gráficas</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+									<li style="color:green">Verde OK</li>
+									<li style="color:red">Rojo O_o'</li>
+									</ul>
+								</td>
+							</tr>
+
+						</table>
+						<img width="500" height="200" src="./gifs/monitorizacion.png"/>
+						<img width="500" height="200" src="./gifs/monitorizacion.gif"/>
+
+					</section>
+					<section>
+						<h2>Speed VS blindness</h2>
+						<ul>
+							<li>Alertas repetitivas</li>
+							<li>Alertas cifradas</li>
+							<li>Alertas falsos positivos</li>
+							<li>Alertas en base rango de errores en logs</li>
+							<li>Alertas basadas en expectativas</li>
+							<img width="500" height="300" src="./gifs/logs.gif">
+						</ul>
+					</section>
+					<section>
+						<h2>Speed VS blindness</h2>
+						<ul>
+							<li>Backups</li>
+							<li>¿Monitorización de backups?</li>
+							<li>Disaster recovery</li>
+							<img width="500" height="300" src="./gifs/backup.gif">
+						</ul>
+
+					</section>
+				</section>
+				<!-- __ LECCIONES APRENDIDAS __ -->
+				<section>
+					<h2>Lecciones aprendidas</h2>
+					<p>
+						Hay alguien tan inteligente que aprende de la experiencia de los demás.
+					</p>
+					<img src="./gifs/lecciones.gif"/>
+				</section>
+				<section>
+					<section>
+						<h2>Diseño rentable</h2>
+						<br>
+						<img src="./gifs/efficiency1.gif"/>
+					</section>
+					<section>
+						<h2>Diseño rentable</h2>
+						<ul>
+							<li>Escalabilidad vertical</li>
+							<li>Escalabilidad horizontal</li>
+							<li>Incremento rendimiento => Menor coste</li>
+						</ul>
+						<br>
+						<img src="./gifs/efficiency.gif"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Infraestructura inmutable</h2>
+						<br>
+						<img src="./gifs/inmortal2.jpg"/>
+					</section>
+					<section>
+						<h2>Infraestructura inmutable</h2>
+						<ul>
+							<li>1 unidad inmutable: VM, container...</li>
+							<li>Regenerada después de cada cambio</li>
+							<li>Promoted from environment to environment</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Infraestructura inmutable</h2>
+						<ul>
+							<li>Mascotas VS Ganado</li>
+							<li>Sin estado</li>
+							<li>Bases de datos? Replicación</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Efecto dominó</h2>
+						<br>
+						<img src="./gifs/domino.gif"/>
+					</section>
+					<section>
+						<h2>Efecto dominó</h2>
+						<ul>
+							<li>Circuit breakers</li>
+							<li>Fallbacks</li>
+							<li>Exponential backoff</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Encontrar la raiz del problema</h2>
+						<br>
+						<img src="./gifs/root.jpg"/>
+					</section>
+					<section>
+						<h2>Encontrar la raiz del problema</h2>
+						<ul>
+							<li>Caja negra</li>
+							<li>Metodologias:
+							<ul>
+								<li>5 Whys</li>
+								<li>USE Method (Utilización Saturación y Errores)</li>
+							</ul>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Responsabilidad compartida</h2>
+						<br>
+						<img src="./gifs/share.gif"/>
+					</section>
+					<section>
+						<h2>Responsabilidad compartida</h2>
+						<br>
+						<img src="./gifs/share2.jpg"/>
+					</section>
+				</section>
+				<!-- __ CLOSING __ -->
+				<section>
+
+					<br>
+					<h2>Gracias</h2>
+					<br>
+					<h5>jaime.jorge@schibsted.com</h5>
+					<h5>jordi.miguel@schibsted.com</h5>
+				</section>
+			</div>
+
+			<!-- common thingie at the bottom -->
+			<p style="position:absolute; bottom:0px; left:0.8em; font-size: 1em !important;">
+			</p>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
